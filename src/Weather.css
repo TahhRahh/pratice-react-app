@@ -1,3 +1,16 @@
 .Weather{
-    background-color:blue;
+    border-style:solid;
+    
+}
+img {
+    max-width: 60%;
+    max-height: 60%;
+    display:block;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+ul{
+    text-align: center;
+    list-style-type: none;
 }

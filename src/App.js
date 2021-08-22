@@ -10,7 +10,7 @@ function App() {
       <div className ="container">
       <Weather />
       </div>
-      <button>Howdy</button>
+      
       <footer>
         This project is coded by Tara Ryan and is 
       <a href="https://github.com/TahhRahh/pratice-react-app">
