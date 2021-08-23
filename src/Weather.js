@@ -5,6 +5,9 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+    const apiKey ="9697d4024e79e994413fcf50b338f627";
+    let city ="Dublin";
+    let apiUrl ='http://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API key}&units=metric';
     return (
         <div className ="Weather"> 
         
