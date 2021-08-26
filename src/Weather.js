@@ -5,9 +5,16 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-    const apiKey ="9697d4024e79e994413fcf50b338f627";
-    let city ="Dublin";
-    let apiUrl ='http://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API key}&units=metric';
+    const [ready, setReady] = useState(false);
+    const[temperature, setTemperature] = useState(null);
+function handleResponse(response){
+    console.log(response.data);
+    setTemperature(response.data.main.temp);
+    setReady(true);
+}
+
+if(ready){
+
     return (
         <div className ="Weather"> 
         
@@ -46,7 +53,7 @@ export default function Weather() {
 </ul>
 <div className ="row">
 <div className="col-4">
-        6°C
+        {temperature}
     </div>
     <div className ="col-4">
         <img
@@ -71,5 +78,18 @@ export default function Weather() {
 </div>
 </div>
 </div>
-    )
+    );
+
+}
+
+else {
+    const apiKey ="9697d4024e79e994413fcf50b338f627";
+    let city ="Dublin";
+    let apiUrl ='http://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API key}&units=metric';
+
+    return "Loading...";
+}
+
+   
+    
     }
