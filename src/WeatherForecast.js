@@ -33,7 +33,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let apiKey = "9697d4024e79e994413fcf50b338f627";
+    
     let url = `http://api.openweathermap.org/data/2.5/weather?q=&appid={API key}&units=metric`;
 
     axios.get(url).then(handleForecastResponse);
